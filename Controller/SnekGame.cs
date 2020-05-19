@@ -3,6 +3,7 @@ namespace Snek
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
+    using Controller;
     using View.Renderers;
 
     public class SnekGame : Game
@@ -25,8 +26,9 @@ namespace Snek
 
         protected override void Initialize()
         {
+            StateMachine.Initialize();
+            StateMachine.ChangeState();
             base.Initialize();
-
         }
 
         protected override void LoadContent()
@@ -37,12 +39,16 @@ namespace Snek
         protected override void Update(GameTime gameTime)
         {
             Elapsed = (double) gameTime.ElapsedGameTime.TotalSeconds;
+            StateMachine.CurrentState.Execute();
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            SpriteBatch.Begin();
+            StateMachine.CurrentState.Draw(Renderer);
+            SpriteBatch.End();
             base.Draw(gameTime);
         }
     }
