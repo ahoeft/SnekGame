@@ -5,9 +5,13 @@
   <Config />
   <SourceFiles>
     <File>C:/code/snek/Content/Font.spritefont</File>
+    <File>C:/code/snek/Content/snakechunk.png</File>
     <File>C:/code/snek/Content/snakehead.png</File>
+    <File>C:/code/snek/Content/snaketail.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
