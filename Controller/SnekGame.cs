@@ -36,6 +36,7 @@ namespace Snek
 
         protected override void Update(GameTime gameTime)
         {
+            Elapsed = (double) gameTime.ElapsedGameTime.TotalSeconds;
             base.Update(gameTime);
         }
 
