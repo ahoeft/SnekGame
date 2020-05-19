@@ -28,15 +28,19 @@ namespace Snek.Controller.States
 
             if(Garden.player.Direction == Direction.Right) {
                 Garden.player.SnakeHead.X = Garden.player.SnakeHead.X + Garden.player.Speed;
+                Garden.player.SnakeTail.X = Garden.player.SnakeTail.X + Garden.player.Speed;
             }
             if(Garden.player.Direction == Direction.Left) {
                 Garden.player.SnakeHead.X = Garden.player.SnakeHead.X - Garden.player.Speed;
+                Garden.player.SnakeTail.X = Garden.player.SnakeTail.X - Garden.player.Speed;
             }
             if(Garden.player.Direction == Direction.Up) {
                 Garden.player.SnakeHead.Y = Garden.player.SnakeHead.Y - Garden.player.Speed;
+                Garden.player.SnakeTail.Y = Garden.player.SnakeTail.Y - Garden.player.Speed;
             }
             if(Garden.player.Direction == Direction.Down) {
                 Garden.player.SnakeHead.Y = Garden.player.SnakeHead.Y + Garden.player.Speed;
+                Garden.player.SnakeTail.Y = Garden.player.SnakeTail.Y + Garden.player.Speed;
             }
             bool collisionDetected = Garden.player.SnakeHead.X > 749 || Garden.player.SnakeHead.Y > 549 || Garden.player.SnakeHead.X < 1 || Garden.player.SnakeHead.Y < 1;
             if (collisionDetected) {

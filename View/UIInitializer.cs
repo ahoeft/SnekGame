@@ -6,10 +6,13 @@ namespace Snek.View.UI {
 
     public static class UIInitializer {
         public static PlayerUI CreatePlayerUI(ContentManager contentManager) {
-            Texture2D image = contentManager.Load<Texture2D>("snakehead");
-            Rectangle rectangle = new Rectangle(0,0,50,50);
-            Sprite sprite = new Sprite(rectangle, image);
-            return new PlayerUI(sprite);
+            Texture2D head = contentManager.Load<Texture2D>("snakehead");
+            Texture2D tail = contentManager.Load<Texture2D>("snaketail");
+            Rectangle rectangle1 = new Rectangle(1,1,50,50);
+            Rectangle rectangle2 = new Rectangle(51,1,50,50);
+            Sprite headSprite = new Sprite(rectangle2, head);
+            Sprite tailSprite = new Sprite(rectangle1, tail);
+            return new PlayerUI(headSprite, tailSprite);
         }
     }
 }

@@ -5,16 +5,19 @@ namespace Snek.View.UI
 
     public class PlayerUI
     {
-        public Sprite Sprite { get; set; }
+        public Sprite Head { get; set; }
+        public Sprite Tail { get; set; }
 
-        public PlayerUI(Sprite sprite)
+        public PlayerUI(Sprite head, Sprite tail)
         {
-            this.Sprite = sprite;
+            this.Head = head;
+            this.Tail = tail;
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(this.Sprite.Image, this.Sprite.Rectangle, Color.White);
+            spriteBatch.Draw(this.Head.Image, this.Head.Rectangle, Color.White);
+            spriteBatch.Draw(this.Tail.Image, this.Tail.Rectangle, Color.White);
         }
     }
 }

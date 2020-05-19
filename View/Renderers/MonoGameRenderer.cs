@@ -32,8 +32,10 @@ namespace Snek.View.Renderers {
             if(Garden.gameOver) {
                 NotificationText = "Game Over!";
             } else {
-                snekPlayer.Sprite.Rectangle.X = Garden.player.SnakeHead.X; 
-                snekPlayer.Sprite.Rectangle.Y = Garden.player.SnakeHead.Y; 
+                snekPlayer.Head.Rectangle.X = Garden.player.SnakeHead.X; 
+                snekPlayer.Head.Rectangle.Y = Garden.player.SnakeHead.Y; 
+                snekPlayer.Tail.Rectangle.X = Garden.player.SnakeTail.X; 
+                snekPlayer.Tail.Rectangle.Y = Garden.player.SnakeTail.Y; 
                 NotificationText = Garden.player.SnakeHead.X.ToString() + " " + Garden.player.SnakeHead.Y.ToString();
             }
         }
