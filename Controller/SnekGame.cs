@@ -27,6 +27,8 @@ namespace Snek
         protected override void Initialize()
         {
             StateMachine.Initialize();
+            StateMachine.CurrentState = StateMachine.States["InitialState"];
+            StateMachine.CurrentState.Execute();
             StateMachine.ChangeState();
             base.Initialize();
         }

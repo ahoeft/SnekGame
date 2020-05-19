@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Snek.Controller.States;
 
 namespace Snek.Controller
@@ -5,11 +6,21 @@ namespace Snek.Controller
     public static class StateMachine 
     {
         public static State CurrentState;
+        public static Dictionary<string, State> States = new Dictionary<string, State>();
+
+        private static InitialState initialState;
+        private static MoveSnekState moveSnekState;
+
         public static void Initialize () {
-            throw new System.NotImplementedException();
+            moveSnekState = new MoveSnekState(initialState);
+            initialState = new InitialState(moveSnekState);
+
+            States.Add("InitialState", initialState);
+            States.Add("MoveSnekState", moveSnekState);
+            CurrentState = initialState;
         }
         public static void ChangeState() {
-            throw new System.NotImplementedException();
+            CurrentState = CurrentState.NextState;
         }
     }
     
