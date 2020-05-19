@@ -10,13 +10,16 @@ namespace Snek.Controller
 
         private static InitialState initialState;
         private static MoveSnekState moveSnekState;
+        private static EndGameState endGameState;
 
         public static void Initialize () {
-            moveSnekState = new MoveSnekState(initialState);
+            endGameState = new EndGameState(initialState);
+            moveSnekState = new MoveSnekState(endGameState);
             initialState = new InitialState(moveSnekState);
 
             States.Add("InitialState", initialState);
             States.Add("MoveSnekState", moveSnekState);
+            States.Add("EndGameState", endGameState);
             CurrentState = initialState;
         }
         public static void ChangeState() {

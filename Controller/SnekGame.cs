@@ -16,7 +16,6 @@ namespace Snek
 
         public SnekGame()
         {
-            Renderer = new MonoGameRenderer();
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
@@ -26,6 +25,7 @@ namespace Snek
 
         protected override void Initialize()
         {
+            Renderer = new MonoGameRenderer();
             StateMachine.Initialize();
             StateMachine.CurrentState = StateMachine.States["InitialState"];
             StateMachine.CurrentState.Execute();

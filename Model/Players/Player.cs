@@ -20,6 +20,7 @@ namespace Snek.Model.Players
             X = 1;
             Y = 1;
             Direction = Direction.Right;
+            Speed = 1;
         }
     }
 }
