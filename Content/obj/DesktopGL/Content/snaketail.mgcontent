@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/code/snek/Content/snakehead.png</SourceFile>
-  <SourceTime>2020-05-19T16:19:59.9972032-05:00</SourceTime>
-  <DestFile>C:/code/snek/Content/bin/DesktopGL/Content/snakehead.xnb</DestFile>
-  <DestTime>2020-05-19T16:32:17.7124753-05:00</DestTime>
+  <SourceFile>C:/code/snek/Content/snaketail.png</SourceFile>
+  <SourceTime>2020-05-19T16:23:08.8983263-05:00</SourceTime>
+  <DestFile>C:/code/snek/Content/bin/DesktopGL/Content/snaketail.xnb</DestFile>
+  <DestTime>2020-05-19T16:32:17.7274801-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-08-05T14:17:44-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

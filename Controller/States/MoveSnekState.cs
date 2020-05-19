@@ -27,18 +27,18 @@ namespace Snek.Controller.States
             }
 
             if(Garden.player.Direction == Direction.Right) {
-                Garden.player.X = Garden.player.X + Garden.player.Speed;
+                Garden.player.SnakeHead.X = Garden.player.SnakeHead.X + Garden.player.Speed;
             }
             if(Garden.player.Direction == Direction.Left) {
-                Garden.player.X = Garden.player.X - Garden.player.Speed;
+                Garden.player.SnakeHead.X = Garden.player.SnakeHead.X - Garden.player.Speed;
             }
             if(Garden.player.Direction == Direction.Up) {
-                Garden.player.Y = Garden.player.Y - Garden.player.Speed;
+                Garden.player.SnakeHead.Y = Garden.player.SnakeHead.Y - Garden.player.Speed;
             }
             if(Garden.player.Direction == Direction.Down) {
-                Garden.player.Y = Garden.player.Y + Garden.player.Speed;
+                Garden.player.SnakeHead.Y = Garden.player.SnakeHead.Y + Garden.player.Speed;
             }
-            bool collisionDetected = Garden.player.X > 749 || Garden.player.Y > 549 || Garden.player.X < 1 || Garden.player.Y < 1;
+            bool collisionDetected = Garden.player.SnakeHead.X > 749 || Garden.player.SnakeHead.Y > 549 || Garden.player.SnakeHead.X < 1 || Garden.player.SnakeHead.Y < 1;
             if (collisionDetected) {
                 StateMachine.ChangeState();
             }
